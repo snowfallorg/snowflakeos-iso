@@ -1,0 +1,101 @@
+{
+  "nodes": {
+    "calamares-snowflakeos-extensions": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1663523661,
+        "narHash": "sha256-07EQR/My9/Xn3nRgzdNXW/I/nqMQ3xcuK8tkpb5ouYU=",
+        "owner": "snowflakelinux",
+        "repo": "calamares-snowflakeos-extensions",
+        "rev": "5c0de592b3fb444d55b5cc33fff24eb773094744",
+        "type": "github"
+      },
+      "original": {
+        "owner": "snowflakelinux",
+        "repo": "calamares-snowflakeos-extensions",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1663357389,
+        "narHash": "sha256-oYA2nVRSi6yhCBqS5Vz465Hw+3BQOVFEhfbfy//3vTs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "da6a05816e7fa5226c3f61e285ef8d9dfc868f3c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "calamares-snowflakeos-extensions": "calamares-snowflakeos-extensions",
+        "nixpkgs": "nixpkgs",
+        "snowflake": "snowflake",
+        "utils": "utils_2"
+      }
+    },
+    "snowflake": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1663520261,
+        "narHash": "sha256-N7x+ExspyULgXr1nt3Zd2wUziKG9WBpL0+5JfnxKnNY=",
+        "owner": "snowflakelinux",
+        "repo": "snowflake-modules",
+        "rev": "87f570b4c7a9a5be80ff6444a9b2ca0f94ecb943",
+        "type": "github"
+      },
+      "original": {
+        "owner": "snowflakelinux",
+        "repo": "snowflake-modules",
+        "type": "github"
+      }
+    },
+    "utils": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "utils_2": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
