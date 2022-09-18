@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:vlinkz/nixpkgs/kpmcorefix";
     snowflake.url = "github:snowflakelinux/snowflake-modules";
     snowflake.inputs.nixpkgs.follows = "nixpkgs";
     calamares-snowflakeos-extensions.url = "github:snowflakelinux/calamares-snowflakeos-extensions";

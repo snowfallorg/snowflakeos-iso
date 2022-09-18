@@ -8,11 +8,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1663523661,
-        "narHash": "sha256-07EQR/My9/Xn3nRgzdNXW/I/nqMQ3xcuK8tkpb5ouYU=",
+        "lastModified": 1663529896,
+        "narHash": "sha256-QpCa1JH4RstL5WJLB79G5QOEADu0GcY19mDabubrvh0=",
         "owner": "snowflakelinux",
         "repo": "calamares-snowflakeos-extensions",
-        "rev": "5c0de592b3fb444d55b5cc33fff24eb773094744",
+        "rev": "4e97b5452d4c59879d1124376bde7e9321688a92",
         "type": "github"
       },
       "original": {
@@ -23,16 +23,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1663357389,
-        "narHash": "sha256-oYA2nVRSi6yhCBqS5Vz465Hw+3BQOVFEhfbfy//3vTs=",
-        "owner": "NixOS",
+        "lastModified": 1663522677,
+        "narHash": "sha256-NvnszJjOAvdhRflcgAO5Zyp4vWPijvZQqKWrBYbarVk=",
+        "owner": "vlinkz",
         "repo": "nixpkgs",
-        "rev": "da6a05816e7fa5226c3f61e285ef8d9dfc868f3c",
+        "rev": "40bf766dcc03eee4d147920c85e1cdc986e21f40",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "owner": "vlinkz",
+        "ref": "kpmcorefix",
         "repo": "nixpkgs",
         "type": "github"
       }
