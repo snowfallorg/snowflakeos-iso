@@ -5,10 +5,11 @@
     snowflake.inputs.nixpkgs.follows = "nixpkgs";
     calamares-snowflakeos-extensions.url = "github:snowflakelinux/calamares-snowflakeos-extensions";
     calamares-snowflakeos-extensions.inputs.nixpkgs.follows = "nixpkgs";
+    os-installer.url = "github:/snowflakelinux/os-installer-nix";
     utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, utils, snowflake, calamares-snowflakeos-extensions }@inputs:
+  outputs = { self, nixpkgs, utils, snowflake, ... }@inputs:
     utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {

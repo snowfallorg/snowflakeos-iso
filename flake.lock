@@ -8,17 +8,14 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1663529896,
-        "narHash": "sha256-QpCa1JH4RstL5WJLB79G5QOEADu0GcY19mDabubrvh0=",
-        "owner": "snowflakelinux",
-        "repo": "calamares-snowflakeos-extensions",
-        "rev": "4e97b5452d4c59879d1124376bde7e9321688a92",
-        "type": "github"
+        "lastModified": 1663540309,
+        "narHash": "sha256-XAiPol9qlnSxXMbO5GBAEW4rlNQPcKjnJJzCRcSv+bE=",
+        "path": "/home/victor/Documents/snowflake/calamares-snowflakeos-extensions",
+        "type": "path"
       },
       "original": {
-        "owner": "snowflakelinux",
-        "repo": "calamares-snowflakeos-extensions",
-        "type": "github"
+        "path": "/home/victor/Documents/snowflake/calamares-snowflakeos-extensions",
+        "type": "path"
       }
     },
     "nixpkgs": {
@@ -37,12 +34,96 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1663494472,
+        "narHash": "sha256-fSowlaoXXWcAM8m9wA6u+eTJJtvruYHMA+Lb/tFi/qM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f677051b8dc0b5e2a9348941c99eea8c4b0ff28f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1663178737,
+        "narHash": "sha256-ayOtdyoNx6BqJtTYVzdQCDz/YWb67TY/CMGacFCgNQo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1158501e7c7cba26d922723cf9f70099995eb755",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "os-installer": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2",
+        "os-installer-snowflake-config": "os-installer-snowflake-config",
+        "os-installer-src": "os-installer-src",
+        "utils": "utils_3",
+        "vte-src": "vte-src"
+      },
+      "locked": {
+        "lastModified": 1663572889,
+        "narHash": "sha256-8grRVQNHMibPQiZIjhlCZQBLIoP/O7gB8aSt3CR794U=",
+        "path": "/home/victor/Documents/snowflake/os-installer-nix",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/victor/Documents/snowflake/os-installer-nix",
+        "type": "path"
+      }
+    },
+    "os-installer-snowflake-config": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3",
+        "utils": "utils_2"
+      },
+      "locked": {
+        "lastModified": 1663572878,
+        "narHash": "sha256-j1XthE9S8TYDB2OO7uHSCQkdxE3GQGO1I8yD1NtENUE=",
+        "path": "/home/victor/Documents/snowflake/os-installer-snowflake-config",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/victor/Documents/snowflake/os-installer-snowflake-config",
+        "type": "path"
+      }
+    },
+    "os-installer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663525207,
+        "narHash": "sha256-vub3KMjZsDu8YePaSunzTO2jy0c0aO9oNcmFEONIzIA=",
+        "ref": "refs/heads/main",
+        "rev": "decef038532877db7f25092f41db04ddf6ea2799",
+        "revCount": 605,
+        "type": "git",
+        "url": "https://gitlab.gnome.org/p3732/os-installer"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.gnome.org/p3732/os-installer"
+      }
+    },
     "root": {
       "inputs": {
         "calamares-snowflakeos-extensions": "calamares-snowflakeos-extensions",
         "nixpkgs": "nixpkgs",
+        "os-installer": "os-installer",
         "snowflake": "snowflake",
-        "utils": "utils_2"
+        "utils": "utils_4"
       }
     },
     "snowflake": {
@@ -93,6 +174,53 @@
         "owner": "numtide",
         "repo": "flake-utils",
         "type": "github"
+      }
+    },
+    "utils_3": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "utils_4": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "vte-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663514498,
+        "narHash": "sha256-ZE0t/w0nUkIRPUI+N1zrx0LQOPmQoT74w74pLdbUhZ0=",
+        "ref": "master",
+        "rev": "9dbae321af881924b5cae245b3d956497e088437",
+        "revCount": 5217,
+        "type": "git",
+        "url": "https://gitlab.gnome.org/gnome/vte"
+      },
+      "original": {
+        "ref": "master",
+        "type": "git",
+        "url": "https://gitlab.gnome.org/gnome/vte"
       }
     }
   },
