@@ -5,7 +5,7 @@
     snowflake.inputs.nixpkgs.follows = "nixpkgs";
     calamares-snowflakeos-extensions.url = "github:snowflakelinux/calamares-snowflakeos-extensions";
     calamares-snowflakeos-extensions.inputs.nixpkgs.follows = "nixpkgs";
-    os-installer.url = "github:/snowflakelinux/os-installer-nix";
+    os-installer.url = "github:snowflakelinux/os-installer-nix";
     utils.url = "github:numtide/flake-utils";
   };
 

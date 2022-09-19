@@ -1,5 +1,6 @@
 { pkgs, lib, ... }:
 {
+  environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
   environment.systemPackages = with pkgs; [
     glibcLocales
   ];

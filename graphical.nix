@@ -1,6 +1,5 @@
 { pkgs, lib, config, inputs, system, ... }:
 let
-  # calamares-nixos-autostart = pkgs.makeAutostartItem { name = "io.calamares.calamares"; package = pkgs.calamares-nixos; };
   os-installer-autostart = pkgs.makeAutostartItem { name = "com.github.p3732.OS-Installer"; package = inputs.os-installer.packages.${system}.os-installer; };
 in
 {
