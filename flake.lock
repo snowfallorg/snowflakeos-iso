@@ -78,11 +78,11 @@
         "vte-src": "vte-src"
       },
       "locked": {
-        "lastModified": 1663626760,
-        "narHash": "sha256-71ESM7YqaBr/2l81wrDuWyUWNrBYx/oVLSIlsk462B0=",
+        "lastModified": 1663650943,
+        "narHash": "sha256-5AL1pfPPEh7bV4wOUHm8kbcm69oBo6VPi576HVd9sOM=",
         "owner": "snowflakelinux",
         "repo": "os-installer-nix",
-        "rev": "67cfc7ebf36531167b1a33c0fb2fac29b032c366",
+        "rev": "2ffcd7a3e2e78b47ad9edbe70debb04682d2d797",
         "type": "github"
       },
       "original": {
@@ -97,11 +97,11 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1663626677,
-        "narHash": "sha256-gUNLanPx5g38J98jLKOGEwZ21Z7X2cduunXeDrVm0n4=",
+        "lastModified": 1663650897,
+        "narHash": "sha256-wdT+vnV6HHkTUmm2pwDJHtF1tmh72cbh0tVIIlDn64k=",
         "owner": "snowflakelinux",
         "repo": "os-installer-snowflake-config",
-        "rev": "f86351a2678aba499d6429b07766f2ac617287ef",
+        "rev": "f5365766d4d98cb0998bf0a590356628ed760ad0",
         "type": "github"
       },
       "original": {
