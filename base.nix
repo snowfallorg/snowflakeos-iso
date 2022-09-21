@@ -1,5 +1,8 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, system, ... }:
 {
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Fix issue with zfs on latest kernel: https://github.com/NixOS/nixpkgs/issues/58959
+  boot.supportedFilesystems = lib.mkForce [ "btrfs" "reiserfs" "vfat" "f2fs" "xfs" "ntfs" "cifs" ];
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
   environment.systemPackages = with pkgs; [
     glibcLocales
