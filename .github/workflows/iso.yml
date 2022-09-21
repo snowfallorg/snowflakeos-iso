@@ -1,7 +1,6 @@
 name: "Build ISO"
 on:
-  pull_request:
-  push:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,7 +10,7 @@ jobs:
       with:
         extra_nix_config: |
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-    - run: nix build
+    - run: nix build --log-format raw -v
     - name: Upload
       uses: ncipollo/release-action@v1
       with:
