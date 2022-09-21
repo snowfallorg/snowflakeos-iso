@@ -4,12 +4,8 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    libsForQt5.kpmcore
-    calamares-nixos
     os-installer-autostart
-    inputs.calamares-snowflakeos-extensions.packages.${system}.calamares-snowflakeos-extensions
     inputs.os-installer.packages.${system}.os-installer
-    libsForQt5.full
   ];
 
   snowflakeos.gnome.enable = true;
@@ -18,7 +14,7 @@ in
     # Add Firefox and other tools useful for installation to the launcher
     favoriteAppsOverride = ''
       [org.gnome.shell]
-      favorite-apps=[ 'firefox.desktop', 'nixos-manual.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop', 'gparted.desktop' ]
+      favorite-apps=[ 'firefox.desktop', 'nixos-manual.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop', 'gparted.desktop', 'com.github.p3732.OS-Installer' ]
     '';
 
     # Override GNOME defaults to disable GNOME tour and disable suspend

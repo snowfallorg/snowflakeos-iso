@@ -1,38 +1,17 @@
 {
   "nodes": {
-    "calamares-snowflakeos-extensions": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "utils": "utils"
-      },
-      "locked": {
-        "lastModified": 1663598911,
-        "narHash": "sha256-+lXtk3HzAvJmfmOQghwUbY0U9SB6hd1EdMIyMYO9xbs=",
-        "owner": "snowflakelinux",
-        "repo": "calamares-snowflakeos-extensions",
-        "rev": "7676db68e3e89abde54d912cf5b0a64594e74b7a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "snowflakelinux",
-        "repo": "calamares-snowflakeos-extensions",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1663522677,
-        "narHash": "sha256-NvnszJjOAvdhRflcgAO5Zyp4vWPijvZQqKWrBYbarVk=",
-        "owner": "vlinkz",
+        "lastModified": 1663494472,
+        "narHash": "sha256-fSowlaoXXWcAM8m9wA6u+eTJJtvruYHMA+Lb/tFi/qM=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "40bf766dcc03eee4d147920c85e1cdc986e21f40",
+        "rev": "f677051b8dc0b5e2a9348941c99eea8c4b0ff28f",
         "type": "github"
       },
       "original": {
-        "owner": "vlinkz",
-        "ref": "kpmcorefix",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -53,28 +32,14 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1663494472,
-        "narHash": "sha256-fSowlaoXXWcAM8m9wA6u+eTJJtvruYHMA+Lb/tFi/qM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "f677051b8dc0b5e2a9348941c99eea8c4b0ff28f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "os-installer": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "os-installer-snowflake-config": "os-installer-snowflake-config",
         "os-installer-src": "os-installer-src",
-        "utils": "utils_3",
+        "utils": "utils_2",
         "vte-src": "vte-src"
       },
       "locked": {
@@ -93,8 +58,8 @@
     },
     "os-installer-snowflake-config": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3",
-        "utils": "utils_2"
+        "nixpkgs": "nixpkgs_2",
+        "utils": "utils"
       },
       "locked": {
         "lastModified": 1663735927,
@@ -128,11 +93,10 @@
     },
     "root": {
       "inputs": {
-        "calamares-snowflakeos-extensions": "calamares-snowflakeos-extensions",
         "nixpkgs": "nixpkgs",
         "os-installer": "os-installer",
         "snowflake": "snowflake",
-        "utils": "utils_4"
+        "utils": "utils_3"
       }
     },
     "snowflake": {
@@ -186,21 +150,6 @@
       }
     },
     "utils_3": {
-      "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "utils_4": {
       "locked": {
         "lastModified": 1659877975,
         "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",

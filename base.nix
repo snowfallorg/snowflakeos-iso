@@ -12,6 +12,7 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+  nix.settings.auto-optimise-store = true;
   users.users = {
     snowflake = {
       isNormalUser = true;

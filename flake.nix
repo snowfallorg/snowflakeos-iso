@@ -1,11 +1,10 @@
 {
   inputs = {
-    nixpkgs.url = "github:vlinkz/nixpkgs/kpmcorefix";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     snowflake.url = "github:snowflakelinux/snowflake-modules";
     snowflake.inputs.nixpkgs.follows = "nixpkgs";
-    calamares-snowflakeos-extensions.url = "github:snowflakelinux/calamares-snowflakeos-extensions";
-    calamares-snowflakeos-extensions.inputs.nixpkgs.follows = "nixpkgs";
     os-installer.url = "github:snowflakelinux/os-installer-nix";
+    os-installer.inputs.nixpkgs.follows = "nixpkgs";
     utils.url = "github:numtide/flake-utils";
   };
 
@@ -15,7 +14,6 @@
         pkgs = import nixpkgs {
           inherit system;
         };
-        name = "snowflake-iso";
       in
       rec
       {
