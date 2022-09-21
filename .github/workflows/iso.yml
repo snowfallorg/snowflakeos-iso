@@ -8,12 +8,14 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
     steps:
     - uses: actions/checkout@v2.4.0
-    - uses: cachix/install-nix-action@v15
+    - uses: cachix/install-nix-action@v17
       with:
         extra_nix_config: |
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
     - name: Build
+      id: build
       run: |
+        rm flake.lock
         nix build --log-format raw -v
         echo "::set-output name=release::$(ls result/iso | grep iso | sed "s/-/\n/g" | head -n2 | tail -n1)"
     - name: Upload
