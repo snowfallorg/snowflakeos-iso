@@ -1,0 +1,20 @@
+name: "Build ISO"
+on:
+  pull_request:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.4.0
+    - uses: cachix/install-nix-action@v15
+      with:
+        extra_nix_config: |
+          access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+    - run: nix build
+    - name: Upload
+      uses: ncipollo/release-action@v1
+      with:
+         artifacts: "result/iso/*.iso"
+         token: ${{ secrets.GITHUB_TOKEN }}
+         tag: ${{ steps.build.outputs.date }}
