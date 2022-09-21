@@ -12,10 +12,13 @@ jobs:
       with:
         extra_nix_config: |
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-    - run: nix build --log-format raw -v
+    - name: Build
+      run: |
+        nix build --log-format raw -v
+        echo "::set-output name=release::$(ls result/iso | grep iso | sed "s/-/\n/g" | head -n2 | tail -n1)"
     - name: Upload
       uses: ncipollo/release-action@v1
       with:
          artifacts: "result/iso/*.iso"
          token: ${{ secrets.GITHUB_TOKEN }}
-         tag: ${{ steps.build.outputs.date }}
+         tag: ${{ steps.build.outputs.release }}
