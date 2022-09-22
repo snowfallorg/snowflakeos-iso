@@ -4,6 +4,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: ISO Builder
     steps:
     - uses: actions/checkout@v2.4.0
     - uses: cachix/install-nix-action@v17
