@@ -4,8 +4,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-      GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
     steps:
     - uses: actions/checkout@v2.4.0
     - uses: cachix/install-nix-action@v17
@@ -19,8 +17,7 @@ jobs:
         nix build --log-format raw -v
         echo "::set-output name=release::$(ls result/iso | grep iso | sed "s/-/\n/g" | head -n2 | tail -n1)"
     - name: Upload
-      uses: ncipollo/release-action@v1
+      uses: actions/upload-artifact@v2
       with:
-         artifacts: "result/iso/*.iso"
-         token: ${{ secrets.GITHUB_TOKEN }}
-         tag: ${{ steps.build.outputs.release }}
+        name: SnowflakeOS ${{ steps.build.outputs.release }}
+        path: result/iso/*.iso
