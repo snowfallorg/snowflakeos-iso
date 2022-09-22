@@ -27,15 +27,9 @@
     };
   };
 
-  # Provide networkmanager for easy wireless configuration.
-  networking.networkmanager.enable = true;
-  networking.wireless.enable = false;
-
-  powerManagement.enable = true;
-
   # Enable sound with pipewire.
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.enable = lib.mkForce false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
