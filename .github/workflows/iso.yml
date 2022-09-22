@@ -14,7 +14,6 @@ jobs:
     - name: Build
       id: build
       run: |
-        rm flake.lock
         nix build --log-format raw -v
         echo "::set-output name=release::$(ls result/iso | grep iso | sed "s/-/\n/g" | head -n2 | tail -n1)"
         echo "::set-output name=file::$(ls result/iso | grep iso | head -n1)"
