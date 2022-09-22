@@ -16,8 +16,18 @@ jobs:
         rm flake.lock
         nix build --log-format raw -v
         echo "::set-output name=release::$(ls result/iso | grep iso | sed "s/-/\n/g" | head -n2 | tail -n1)"
-    - name: Upload
+        echo "::set-output name=file::$(ls result/iso | grep iso | head -n1)"
+    - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
         name: SnowflakeOS ${{ steps.build.outputs.release }}
         path: result/iso/*.iso
+    - name: Upload to SourceForge
+      uses: appleboy/scp-action@master
+      with:
+        host: frs.sourceforge.net
+        username: vlinkz
+        port: 22
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: result/iso/${{ steps.build.outputs.file }}
+        target: /home/frs/project/snowflakeos/snowflakeos-unstable-x86_64-linux.iso
