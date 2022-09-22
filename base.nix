@@ -12,7 +12,6 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
-  nix.settings.auto-optimise-store = true;
   users.users = {
     snowflake = {
       isNormalUser = true;
@@ -26,5 +25,22 @@
       isNormalUser = lib.mkForce false;
       group = "nixos";
     };
+  };
+
+  # Provide networkmanager for easy wireless configuration.
+  networking.networkmanager.enable = true;
+  networking.wireless.enable = false;
+
+  powerManagement.enable = true;
+
+  # Enable sound with pipewire.
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 }

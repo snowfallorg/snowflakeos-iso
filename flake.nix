@@ -5,6 +5,7 @@
     snowflake.inputs.nixpkgs.follows = "nixpkgs";
     os-installer.url = "github:snowflakelinux/os-installer-nix";
     os-installer.inputs.nixpkgs.follows = "nixpkgs";
+    nix-software-center.url = "github:vlinkz/nix-software-center";
     utils.url = "github:numtide/flake-utils";
   };
 
@@ -20,7 +21,7 @@
         iso = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
-            "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-base.nix"
+            "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-base.nix"
             ./base.nix
             ./graphical.nix
             ./iso-image.nix
