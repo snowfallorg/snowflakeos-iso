@@ -14,7 +14,7 @@ in
     # Add Firefox and other tools useful for installation to the launcher
     favoriteAppsOverride = ''
       [org.gnome.shell]
-      favorite-apps=[ 'firefox.desktop', 'nixos-manual.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop', 'gparted.desktop', 'com.github.p3732.OS-Installer' ]
+      favorite-apps=[ 'firefox.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop', 'dev.vlinkz.NixSoftwareCenter.desktop', 'gparted.desktop', 'com.github.p3732.OS-Installer.desktop' ]
     '';
 
     # Override GNOME defaults to disable GNOME tour and disable suspend
@@ -46,5 +46,12 @@ in
       enable = true;
       user = "snowflake";
     };
+  };
+
+  programs.nix-software-center = {
+    enable = true;
+    systemconfig = null;
+    flake = null;
+    flakearg = null;
   };
 }
