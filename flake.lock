@@ -129,11 +129,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1666983966,
-        "narHash": "sha256-K7m+B4DDJxVI/28iy+YfMDGjAdHcEmAL28Gl5w1xLVk=",
+        "lastModified": 1667104755,
+        "narHash": "sha256-DpOwn/iLMO/PoeoPy3idNVrrEu3nA5JRQKgLncYJ9Mo=",
         "owner": "vlinkz",
         "repo": "nix-software-center",
-        "rev": "469b78847bdaeb2f4b61855c1e1bca61e11f49c9",
+        "rev": "f355d403360d5d5758acd2f7b13ebeb67c78e5eb",
         "type": "github"
       },
       "original": {
