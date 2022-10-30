@@ -1,16 +1,30 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    snowflake.url = "github:snowflakelinux/snowflake-modules";
-    snowflake.inputs.nixpkgs.follows = "nixpkgs";
-    os-installer.url = "github:snowflakelinux/os-installer-nix";
-    os-installer.inputs.nixpkgs.follows = "nixpkgs";
-    nix-software-center.url = "github:vlinkz/nix-software-center";
-    nix-software-center.inputs.nixpkgs.follows = "nixpkgs";
+    snowflake = {
+      url = "github:snowflakelinux/snowflake-modules";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    os-installer = {
+      url = "github:snowflakelinux/os-installer-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-data = {
+      url = "github:snowflakelinux/nix-data";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-software-center = {
+      url = "github:vlinkz/nix-software-center";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    snow = {
+      url = "github:snowflakelinux/snow";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, utils, snowflake, nix-software-center, ... }@inputs:
+  outputs = { self, nixpkgs, utils, ... }@inputs:
     utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
@@ -26,8 +40,8 @@
             ./base.nix
             ./graphical.nix
             ./iso-image.nix
-            snowflake.nixosModules.snowflake
-            nix-software-center.nixosModules.${system}.nix-software-center
+            inputs.snowflake.nixosModules.snowflake
+            inputs.nix-data.nixosModules.${system}.nix-data
           ];
           specialArgs = { inherit inputs; inherit system; };
         };

@@ -4,7 +4,9 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
+    inputs.nix-software-center.packages.${system}.nix-software-center
     inputs.os-installer.packages.${system}.os-installer
+    inputs.snow.packages.${system}.snow
     os-installer-autostart
   ];
 
@@ -48,7 +50,7 @@ in
     };
   };
 
-  programs.nix-software-center = {
+  programs.nix-data = {
     enable = true;
     systemconfig = null;
     flake = null;
