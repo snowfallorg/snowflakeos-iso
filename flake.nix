@@ -5,22 +5,13 @@
       url = "github:snowflakelinux/snowflake-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    os-installer = {
-      url = "github:snowflakelinux/os-installer-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    os-installer.url = "github:snowflakelinux/os-installer-nix";
     nix-data = {
       url = "github:snowflakelinux/nix-data";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-software-center = {
-      url = "github:vlinkz/nix-software-center";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    snow = {
-      url = "github:snowflakelinux/snow";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-software-center.url = "github:vlinkz/nix-software-center";
+    snow.url = "github:snowflakelinux/snow";
     utils.url = "github:numtide/flake-utils";
   };
 
