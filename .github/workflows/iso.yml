@@ -26,6 +26,7 @@ jobs:
         name: SnowflakeOS ${{ steps.build.outputs.release }}
         path: result/iso/*.iso
     - name: Upload to SourceForge
+      id: upload
       run: |
         mkdir ~/.ssh
         ssh-keyscan frs.sourceforge.net >> ~/.ssh/known_hosts
