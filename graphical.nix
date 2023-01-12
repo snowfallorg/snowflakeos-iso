@@ -1,13 +1,13 @@
 { pkgs, lib, config, inputs, system, ... }:
 let
-  os-installer-autostart = pkgs.makeAutostartItem { name = "com.github.p3732.OS-Installer"; package = inputs.os-installer.packages.${system}.os-installer; };
+  icicle-autostart = pkgs.makeAutostartItem { name = "org.snowflakeos.Icicle"; package = inputs.icicle.packages.${system}.icicle; };
 in
 {
   environment.systemPackages = with pkgs; [
     inputs.nix-software-center.packages.${system}.nix-software-center
-    inputs.os-installer.packages.${system}.os-installer
+    inputs.icicle.packages.${system}.icicle
     inputs.snow.packages.${system}.snow
-    os-installer-autostart
+    icicle-autostart
   ];
 
   snowflakeos.gnome.enable = true;
@@ -16,7 +16,7 @@ in
     # Add Firefox and other tools useful for installation to the launcher
     favoriteAppsOverride = ''
       [org.gnome.shell]
-      favorite-apps=[ 'firefox.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop', 'dev.vlinkz.NixSoftwareCenter.desktop', 'gparted.desktop', 'com.github.p3732.OS-Installer.desktop' ]
+      favorite-apps=[ 'firefox.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop', 'dev.vlinkz.NixSoftwareCenter.desktop', 'gparted.desktop', 'org.snowflakeos.Icicle.desktop' ]
     '';
 
     # Override GNOME defaults to disable GNOME tour and disable suspend

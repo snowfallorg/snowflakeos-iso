@@ -5,7 +5,7 @@
       url = "github:snowflakelinux/snowflake-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    os-installer.url = "github:snowflakelinux/os-installer-nix";
+    icicle.url = "github:snowflakelinux/icicle";
     nix-data = {
       url = "github:snowflakelinux/nix-data";
       inputs.nixpkgs.follows = "nixpkgs";
