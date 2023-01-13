@@ -68,11 +68,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1673495880,
-        "narHash": "sha256-UszHOLRaXmqbK5R2SNrirpDDiK1Ro/ysvGbL9zkMOGM=",
+        "lastModified": 1673571140,
+        "narHash": "sha256-uxqdkKYPiIyyuWOg6/gEVdxJhMzkxfbUAKjoZu7Y458=",
         "owner": "snowflakelinux",
         "repo": "icicle",
-        "rev": "a9e4d1c49a6bf223f42e6b3447e509697830d263",
+        "rev": "1f1ebefeb968356dc8600ecc519eb580f140afbe",
         "type": "github"
       },
       "original": {
@@ -207,11 +207,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1673315479,
-        "narHash": "sha256-GNCFRtDHjTygXGJp/H+f2XQPMGxpYSmNiibIqYzihtM=",
+        "lastModified": 1673450908,
+        "narHash": "sha256-b8em+kwrNtnB7gR8SyVf6WuTyQ+6tHS6dzt9D9wgKF0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c07552f6f7d4eead7806645ec03f7f1eb71ba6bd",
+        "rev": "6c8644fc37b6e141cbfa6c7dc8d98846c4ff0c2e",
         "type": "github"
       },
       "original": {
