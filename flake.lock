@@ -68,11 +68,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1673571140,
-        "narHash": "sha256-uxqdkKYPiIyyuWOg6/gEVdxJhMzkxfbUAKjoZu7Y458=",
+        "lastModified": 1673623698,
+        "narHash": "sha256-Tt1WrNTnDkuP2j/XhXb6iWUOD8do/XHtXg4JXRqbvto=",
         "owner": "snowflakelinux",
         "repo": "icicle",
-        "rev": "1f1ebefeb968356dc8600ecc519eb580f140afbe",
+        "rev": "7c20127c322a6b25ff7c7e5effba1f6b2c0692b7",
         "type": "github"
       },
       "original": {
