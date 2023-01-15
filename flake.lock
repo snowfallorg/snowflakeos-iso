@@ -68,11 +68,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1673623698,
-        "narHash": "sha256-Tt1WrNTnDkuP2j/XhXb6iWUOD8do/XHtXg4JXRqbvto=",
+        "lastModified": 1673753355,
+        "narHash": "sha256-9vuJMXHNQ9p1ya3ejZjsVocVa9C9HF6mTdIMN1T/0wo=",
         "owner": "snowflakelinux",
         "repo": "icicle",
-        "rev": "7c20127c322a6b25ff7c7e5effba1f6b2c0692b7",
+        "rev": "8d595652f6214d006a2a11c95a0c025a1d578513",
         "type": "github"
       },
       "original": {
@@ -207,11 +207,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1673450908,
-        "narHash": "sha256-b8em+kwrNtnB7gR8SyVf6WuTyQ+6tHS6dzt9D9wgKF0=",
+        "lastModified": 1673631141,
+        "narHash": "sha256-AprpYQ5JvLS4wQG/ghm2UriZ9QZXvAwh1HlgA/6ZEVQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6c8644fc37b6e141cbfa6c7dc8d98846c4ff0c2e",
+        "rev": "befc83905c965adfd33e5cae49acb0351f6e0404",
         "type": "github"
       },
       "original": {
@@ -290,11 +290,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1670706152,
-        "narHash": "sha256-xrSY0dt5y5PIzhdOj5Yfvu6zJCBPw9rSwch3XWxVcO4=",
+        "lastModified": 1673729837,
+        "narHash": "sha256-csFoLONIYqFb6G95mnuwwgU+sxxPyl/aqfK3JHn72Wk=",
         "owner": "snowflakelinux",
         "repo": "snowflake-modules",
-        "rev": "beca6107a7511a5ad46b5fd600616a93a8959d1a",
+        "rev": "37c0605cd14016fdcc4beab73566addc91201e8c",
         "type": "github"
       },
       "original": {
