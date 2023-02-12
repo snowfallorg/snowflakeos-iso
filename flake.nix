@@ -5,25 +5,40 @@
       url = "github:snowflakelinux/snowflake-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    icicle.url = "github:snowflakelinux/icicle";
+    icicle = {
+      url = "github:snowflakelinux/icicle";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
     nix-data = {
       url = "github:snowflakelinux/nix-data";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        flake-utils.follows = "utils";
+        nixpkgs.follows = "nixpkgs";
+      };
     };
-    nix-software-center.url = "github:vlinkz/nix-software-center";
-    snow.url = "github:snowflakelinux/snow";
+    nix-software-center = {
+      url = "github:vlinkz/nix-software-center";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
+    snow = {
+      url = "github:snowflakelinux/snow";
+      inputs = {
+        flake-utils.follows = "utils";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     utils.url = "github:numtide/flake-utils";
   };
 
   outputs = { self, nixpkgs, utils, ... }@inputs:
     utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-      in
-      rec
-      {
+      rec {
         iso = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
