@@ -32,7 +32,7 @@
             ./graphical.nix
             ./iso-image.nix
             inputs.snowflake.nixosModules.snowflake
-            inputs.nix-data.nixosModules.${system}.nix-data
+            inputs.nix-data.nixosModules.nix-data
           ];
           specialArgs = { inherit inputs; inherit system; };
         };
