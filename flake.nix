@@ -38,13 +38,7 @@
 
   outputs = { self, nixpkgs, utils, ... }@inputs:
     utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-      in
-      rec
-      {
+      rec {
         iso = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
