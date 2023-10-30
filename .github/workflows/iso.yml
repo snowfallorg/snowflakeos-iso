@@ -17,7 +17,7 @@ jobs:
     - name: Build
       id: build
       run: |
-        nix build --log-format raw -v
+        nix build .#install-isoConfigurations.snowflakeos --log-format raw -v
         echo "::set-output name=release::$(ls result/iso | grep iso | sed "s/-/\n/g" | head -n2 | tail -n1)"
         echo "::set-output name=file::$(ls result/iso | grep iso | head -n1)"
     - name: Upload Artifacts

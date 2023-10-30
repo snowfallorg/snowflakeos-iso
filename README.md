@@ -20,7 +20,7 @@ Previous builds can be found in this repositories [GitHub Actions](https://githu
 ## How to build
 
 1) Clone this repository and navigate to the project directory
-2) `nix build`
+2) `nix build .#install-isoConfigurations.snowflakeos`
 3) The resulting ISO file will be linked in `result/iso/snowflakeos-<version>.iso`
 
 [builtwithnix badge]: https://img.shields.io/badge/Built%20With-Nix-41439A?style=for-the-badge&logo=nixos&logoColor=white
