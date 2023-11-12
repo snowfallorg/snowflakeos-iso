@@ -3,20 +3,13 @@ let
   icicle-autostart = pkgs.makeAutostartItem { name = "org.snowflakeos.Icicle"; package = inputs.icicle.packages.${system}.icicle; };
 in
 {
-  environment.systemPackages = with pkgs; [
-    inputs.nix-software-center.packages.${system}.nix-software-center
-    inputs.icicle.packages.${system}.icicle
-    inputs.snow.packages.${system}.snow
-    icicle-autostart
-  ];
-
-  snowflakeos.gnome.enable = true;
+  icicle.enable = true;
 
   services.xserver.desktopManager.gnome = {
     # Add Firefox and other tools useful for installation to the launcher
     favoriteAppsOverride = ''
       [org.gnome.shell]
-      favorite-apps=[ 'firefox.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop', 'dev.vlinkz.NixSoftwareCenter.desktop', 'gparted.desktop', 'org.snowflakeos.Icicle.desktop' ]
+      favorite-apps=[ 'org.gnome.Epiphany.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop', 'dev.vlinkz.NixSoftwareCenter.desktop', 'gparted.desktop', 'org.snowflakeos.Icicle.desktop' ]
     '';
 
     # Override GNOME defaults to disable GNOME tour and disable suspend
@@ -49,6 +42,19 @@ in
       user = "snowflake";
     };
   };
+
+  # VM guest additions to improve host-guest interaction
+  services.spice-vdagentd.enable = true;
+  services.qemuGuest.enable = true;
+  virtualisation.vmware.guest.enable = pkgs.stdenv.hostPlatform.isx86;
+  virtualisation.hypervGuest.enable = true;
+  services.xe-guest-utilities.enable = pkgs.stdenv.hostPlatform.isx86;
+  # The VirtualBox guest additions rely on an out-of-tree kernel module
+  # which lags behind kernel releases, potentially causing broken builds.
+  virtualisation.virtualbox.guest.enable = false;
+
+  # Enable plymouth
+  boot.plymouth.enable = true;
 
   programs.nix-data = {
     enable = true;

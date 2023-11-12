@@ -1,56 +1,45 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    snowflake = {
-      url = "github:snowflakelinux/snowflake-modules";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    snowfall-lib = {
+      url = "github:snowfallorg/lib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    snowflakeos-modules = {
+      url = "github:snowflakelinux/snowflakeos-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     icicle = {
       url = "github:snowflakelinux/icicle";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-data = {
       url = "github:snowflakelinux/nix-data";
-      inputs = {
-        flake-utils.follows = "utils";
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-software-center = {
-      url = "github:vlinkz/nix-software-center";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    snow = {
-      url = "github:snowflakelinux/snow";
-      inputs = {
-        flake-utils.follows = "utils";
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
-    utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, utils, ... }@inputs:
-    utils.lib.eachDefaultSystem (system:
-      rec {
-        iso = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-base.nix"
-            ./base.nix
-            ./graphical.nix
-            ./iso-image.nix
-            inputs.snowflake.nixosModules.snowflake
-            inputs.nix-data.nixosModules.${system}.nix-data
-          ];
-          specialArgs = { inherit inputs; inherit system; };
-        };
-        defaultPackage = iso.config.system.build.isoImage;
-      });
+  outputs = inputs:
+    inputs.snowfall-lib.mkFlake rec {
+      inherit inputs;
+      channels-config.allowUnfree = true;
+
+      systems.modules.nixos = with inputs; [
+        nix-data.nixosModules.nix-data
+        icicle.nixosModules.icicle
+        snowflakeos-modules.nixosModules.gnome
+        snowflakeos-modules.nixosModules.kernel
+        snowflakeos-modules.nixosModules.networking
+        snowflakeos-modules.nixosModules.pipewire
+        snowflakeos-modules.nixosModules.printing
+        snowflakeos-modules.nixosModules.snowflakeos
+        snowflakeos-modules.nixosModules.metadata
+      ];
+
+      src = ./.;
+    };
 }
