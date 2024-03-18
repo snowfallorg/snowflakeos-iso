@@ -6,15 +6,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     snowflakeos-modules = {
-      url = "github:snowflakelinux/snowflakeos-modules";
+      url = "github:snowfallorg/snowflakeos-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     icicle = {
-      url = "github:snowflakelinux/icicle";
+      url = "github:snowfallorg/icicle";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-data = {
-      url = "github:snowflakelinux/nix-data";
+      url = "github:snowfallorg/nix-data";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-generators = {
