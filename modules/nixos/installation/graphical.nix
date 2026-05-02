@@ -19,7 +19,7 @@ in
       sleep-inactive-battery-type='nothing'
     '';
 
-    extraGSettingsOverridePackages = [ pkgs.gnome.gnome-settings-daemon ];
+    extraGSettingsOverridePackages = [ pkgs.gnome-settings-daemon ];
   };
 
   services.xserver.displayManager = {
