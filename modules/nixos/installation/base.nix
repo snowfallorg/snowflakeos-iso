@@ -28,7 +28,7 @@
   i18n.supportedLocales = [ "all" ];
 
   networking.hostName = "snowflakeos";
-  networking.wireless.enable = false;
+  networking.wireless.enable = lib.mkForce false;
 
   users.users = {
     snowflake = {
