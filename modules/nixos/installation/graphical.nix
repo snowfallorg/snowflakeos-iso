@@ -5,7 +5,7 @@ in
 {
   icicle.enable = true;
 
-  services.xserver.desktopManager.gnome = {
+  services.desktopManager.gnome = {
     # Add Firefox and other tools useful for installation to the launcher
     # Override GNOME defaults to disable GNOME tour and disable suspend
     extraGSettingsOverrides = ''
@@ -22,7 +22,7 @@ in
     extraGSettingsOverridePackages = [ pkgs.gnome-settings-daemon ];
   };
 
-  services.xserver.displayManager = {
+  services.displayManager = {
     gdm = {
       enable = true;
       # autoSuspend makes the machine automatically suspend after inactivity.
