@@ -1,4 +1,8 @@
-{ pkgs, config, lib, inputs, system, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 {
   # Whitelist wheel users to do anything
   # This is useful for things like pkexec
@@ -13,7 +17,6 @@
       }
     });
   '';
-
 
   environment.systemPackages = with pkgs; [
     git
@@ -33,7 +36,11 @@
   users.users = {
     snowflake = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "video" ];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+        "video"
+      ];
       # Allow the graphical user to login without password
       initialHashedPassword = "";
     };
@@ -44,5 +51,5 @@
       group = "nixos";
     };
   };
-  users.groups.nixos = {};
+  users.groups.nixos = { };
 }

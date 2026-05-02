@@ -23,7 +23,8 @@
     };
   };
 
-  outputs = inputs:
+  outputs =
+    inputs:
     inputs.snowfall-lib.mkFlake rec {
       inherit inputs;
       channels-config.allowUnfree = true;
