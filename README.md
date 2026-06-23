@@ -1,7 +1,7 @@
 <div align="center">
 
-SnowflakeOS ISO
-===
+# SnowflakeOS ISO
+
 [![Built with Nix][builtwithnix badge]][builtwithnix]
 [![License: MIT][MIT badge]][MIT]
 [![Chat on Matrix][matrix badge]][matrix]
@@ -17,11 +17,15 @@ Latest ISO files are currently being hosted on [Sourceforge](https://sourceforge
 
 Previous builds can be found in this repositories [GitHub Actions](https://github.com/snowflakelinux/snowflake-iso/actions)
 
+## Documentation
+
+This repo uses [nixos-generators](https://github.com/nix-community/nixos-generators) project.
+
 ## How to build
 
-1) Clone this repository and navigate to the project directory
-2) `nix build .#install-isoConfigurations.snowflakeos`
-3) The resulting ISO file will be linked in `result/iso/snowflakeos-<version>.iso`
+1. Clone this repository and navigate to the project directory
+2. `nixos-rebuild build-image --image-variant iso-installer --flake .#snowflakeos --show-trace`
+3. The resulting ISO file will be linked in `result/iso/snowflakeos-<version>.iso`
 
 [builtwithnix badge]: https://img.shields.io/badge/Built%20With-Nix-41439A?style=for-the-badge&logo=nixos&logoColor=white
 [builtwithnix]: https://builtwithnix.org/

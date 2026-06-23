@@ -1,0 +1,18 @@
+name: Test CI
+
+on: [push, pull_request]
+
+jobs:
+  build-iso:
+    name: "Build Image"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v7
+
+      - name: Lix GHA Installer Action
+        uses: samueldr/lix-gha-installer-action@v2026-06-15
+
+      - name: Build NixOS configuration
+        run: nix build .#nixosConfigurations.snowflakeos.config.system.build.images.iso-installer --show-trace
