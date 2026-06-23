@@ -18,6 +18,10 @@
     });
   '';
 
+  # error: Refusing to evaluate package 'zfs-kernel-2.4.1-7.0.3' in /nix/store/wjfxdzblindbl9sp2hbwhi4iyh5jh348-source/pkgs/os-specific/linux/zfs/generic.nix:327 because it has problems:
+  #- broken: This package is broken.
+  boot.kernelPackages = lib.mkForce pkgs.linuxPackages;
+
   environment.systemPackages = with pkgs; [
     git
     glibcLocales
