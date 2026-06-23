@@ -42,5 +42,6 @@
       ];
 
       src = ./.;
+      alias.shells.default = "iso";
     };
 }
